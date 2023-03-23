@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: django:4.0
+    container_name: django
+    restart: always
+    command: python /app/jobvisualweb/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - /Users/zhangrongrong/project/django_project:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - mysql
+  
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - mysql
+    environment:
+      - PMA_HOST=mysql
+
+  mysql:
+    image: mysql:8.0.32
+    container_name: mysql
+    hostname: mysql
+    env_file: .env
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password --mysqlx=0
+    ports:
+      - 3306:3306
+    volumes:
+      - /Users/zhangrongrong/project/mysql_backup:/var/lib/mysql
+    environment:
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_PORT: ${MYSQL_PORT}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Visualization</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/datatables.min.css' %}"> {% endcomment %}
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" id="mainNav">
+      <a class="navbar-brand" href="#">Job Visualization</a>
+      <form>
+        <input type="search" placeholder="Search">
+        <button><i class="fa fa-search"></i></button>
+      </form>
+    </nav>
+
+    <!-- side bar -->
+    <div class="sidebar">
+      <div class="menu">
+        <div class="item"><a href="{% url 'table' %}"><i class="fa fa-table"></i>Table</a></div>
+        <div class="item"><a href="#"><i class="fa fa-cloud"></i>Word Cloud</a></div>
+        <div class="item"><a class="sub-btn" href="#"><i class="fa fa-area-chart"></i>Charts<i class="fa fa-angle-right dropdown"></i></a>
+          <div class="sub-item">
+            <a href="#">Pie Chart</a>
+            <a href="#">Bar Chart</a>
+            <a href="#">Heat Map</a>
+            <a href="#">Map Bubble</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Main Content Container -->
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Footer -->
+<footer id="footer">Copyright © 2023 All rights reserved</footer>
+
+<!-- js -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js'></script>
+<script src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/dataTables.bootstrap4.js'></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

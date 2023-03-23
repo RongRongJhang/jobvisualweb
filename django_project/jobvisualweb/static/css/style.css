@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+html, body{
+    height: 100%;
+} 
+
+.navbar form{
+    display: flex;
+    margin: 0 900px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+}
+
+.navbar form input,
+.navbar form button{
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.navbar form input{
+    width: 200px;
+}
+
+.navbar form button{
+    width: 40px;
+}
+
+.navbar form input:focus,
+.navbar form button:focus{
+    outline: none;
+}
+
+.navbar a{
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 20%;
+    float: left;
+    padding-top: 100px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0px 10px hsla(0, 0%, 58%, 0.4);
+    position: fixed;
+}
+
+.sidebar .menu .item a{
+    color: #8c8c8c;
+    display: block;
+    padding: 10px 40px;
+    text-decoration: none;
+    position: relative;
+    line-height: 30px;
+}
+
+.sidebar .menu .item a:hover{
+    color: #ffffff;
+    background-color: #8c8c8c;
+    transition: .3s;
+}
+
+.sidebar .menu i{
+    margin-right: 15px;
+}
+
+.sidebar .menu a .dropdown{
+    position: absolute;
+    right: 20px;
+    margin: 5px;
+    transition: .3s;
+}
+
+.sidebar .menu .sub-item{
+    display: none;
+}
+
+.sidebar .menu .sub-item a{
+    padding-left: 75px;
+}
+
+.rotate{
+    transform: rotate(90deg);
+}
+
+.container{
+    height: 100hv;
+    width: 80%;
+    margin-left: 250px;
+    margin-top: 50px;
+    float: right;
+    box-sizing: border-box;
+    background-color: #e7e7e7;
+}
+
+.card{
+    margin: 30px;
+    display: flex;
+}
+
+footer {
+    background-color: #afafaf;
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    clear: both;
+}
