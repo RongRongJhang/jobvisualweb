@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block ext_css %}
+<link rel="stylesheet" href="{% static 'css/piechart.css' %}">
+{% endblock %}
+
+{% block content %}
+<figure class="highcharts-figure">
+    <div id="container"></div>
+</figure>
+{% endblock %}
+
+{% block ext_js %}
+<script src="{% static 'js/piechart.js' %}"></script>
+{% endblock %}

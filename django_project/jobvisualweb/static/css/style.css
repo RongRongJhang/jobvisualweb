@@ -82,16 +82,8 @@ html, body{
     transition: .3s;
 }
 
-.sidebar .menu .sub-item{
-    display: none;
-}
-
-.sidebar .menu .sub-item a{
-    padding-left: 75px;
-}
-
-.rotate{
-    transform: rotate(90deg);
+.sidebar .menu a.collapsed .dropdown{
+    transform: rotate(-90deg);
 }
 
 .container{

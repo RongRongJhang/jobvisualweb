@@ -19,6 +19,16 @@ from mainsite import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name='index'),
+
+    path('', views.table, name='table'),
     path('table/', views.table, name='table'),
+
+    path('word_cloud/', views.word_cloud, name='word_cloud'),
+    path('wordcloud/', views.wordcloud, name='wordcloud'),
+
+    path('pie_chart/', views.pie_chart, name='pie_chart'),
+    path('piechart/', views.piechart, name='piechart'),
+
+    path('lollipop_chart/', views.lollipop_chart, name='lollipop_chart'),
+    path('lollipopchart/', views.lollipopchart, name='lollipopchart'),
 ]
