@@ -26,8 +26,8 @@
 - lollipopchart.html
 2. css
 3. js
- </br>
-◆ DB存取data API
+
+◆ DB存取data API </br>
 - getJobLists
 - getRequireMajors
 - get_piechart_data
