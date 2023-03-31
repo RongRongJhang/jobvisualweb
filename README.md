@@ -27,7 +27,7 @@
 2. css
 3. js
 
-◆ DB存取data API </br>
+◆ 存取DB data API </br>
 - getJobLists
 - getRequireMajors
 - get_piechart_data
