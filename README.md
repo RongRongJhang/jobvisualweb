@@ -20,6 +20,7 @@
 
 ### 03/27 - 03/30
 ◆ 網頁模板切版
+<<<<<<< HEAD
 - wordcloud.html
 - piechart.html
 - lollipopchart.html
@@ -29,3 +30,17 @@
 ### 04/17 - 04/20
 ◆ 104人力銀行爬蟲改寫成專案API </br>
 ◆ Table頁面新增"更新Table"按鈕，點擊後觸發爬蟲API
+=======
+1. templates
+- wordcloud.html
+- piechart.html
+- lollipopchart.html
+2. css
+3. js
+
+◆ 存取DB data API </br>
+- getJobLists
+- getRequireMajors
+- get_piechart_data
+- get_lollipop_data
+>>>>>>> f682ced36360517eddf8ed58eac83a61b462a68e
