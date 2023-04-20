@@ -96,6 +96,11 @@ html, body{
     background-color: #e7e7e7;
 }
 
+.update{
+    margin: 100px;
+    display: flex;
+}
+
 .card{
     margin: 30px;
     display: flex;

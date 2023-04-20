@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class BaseInfo(models.Model):
     job_id=models.AutoField(verbose_name='ID',primary_key=True)
-    company_name=models.CharField(verbose_name='公司名稱',max_length=50)
+    company_name=models.CharField(verbose_name='公司名稱',max_length=100)
     job_title=models.CharField(verbose_name='職稱',max_length=150)
     job_cate=models.CharField(verbose_name='職務類別',max_length=100)
     job_salary=models.CharField(verbose_name='薪資',max_length=50)

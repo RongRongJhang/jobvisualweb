@@ -20,6 +20,8 @@ from mainsite import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    path('update/', views.update, name='update'),
+
     path('', views.table, name='table'),
     path('table/', views.table, name='table'),
 

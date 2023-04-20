@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<div class="update col-md-10 text-left dt-image-register-btn">
+    <a href="{% url 'update' %}" class="btn btn-primary">更新Table</a>
+</div>
 <div class="card mb-3">
     <div class="card-header"><i class="fa fa-table"></i> Basic Table</div>
     <div class="card-body">
@@ -14,7 +17,7 @@
                   <th>薪資</th>
                   <th>工作經歷</th>
                   <th>學歷要求</th>
-                  <th>應徵人數</th>
+                  <th>需求人數</th>
                 </tr>
             </thead>
             <tbody>

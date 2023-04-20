@@ -6,33 +6,33 @@ $.ajax({
         data = JSON.parse(arg);
         Highcharts.chart('container', {
             chart: {
-            type: 'lollipop'
+                type: 'lollipop'
             },
             accessibility: {
-            point: {
-                valueDescriptionFormat: '{index}. {xDescription}, {point.y}.'
-            }
+                point: {
+                    valueDescriptionFormat: '{index}. {xDescription}, {point.y}.'
+                }
             },
             legend: {
-            enabled: false
+                enabled: false
             },
             title: {
-            text: '職缺數量分布'
+                text: '職缺數量分布'
             },
             tooltip: {
-            shared: true
+                shared: true
             },
             xAxis: {
-            type: '新竹地區'
+                type: 'category'
             },
             yAxis: {
-            title: {
-                text: '職缺數'
-            }
+                title: {
+                    text: '職缺數'
+                }
             },
             series: [{
-            name: '職缺數',
-            data:data
+                name: '職缺數',
+                data:data
             }]
         });
     }

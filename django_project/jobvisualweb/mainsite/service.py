@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.db.models import Count, When, Case
 from collections import Counter
 import json
+import os
 
 def getJobLists():
     joblists = BaseInfo.objects.all()
@@ -43,3 +44,15 @@ def get_lollipop_data():
     for word in result: cnt[word] += 1
     data = [{'name':key, 'y':value} for key, value in cnt.items()]
     return data
+
+
+def deleteTable():
+    BaseInfo.objects.all().delete()
+
+
+def updateData():
+    os.system('python3 crawler/service.py')
+
+
+def loadData():
+    os.system('python manage.py loaddata data.json')

@@ -1,7 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .service import *
 
 # Create your views here.
+def update(request):
+    deleteTable()
+    updateData()
+    loadData()
+    return redirect('/table/')
+
 def table(request):
     return render(request, 'table.html', {'JobLists':getJobLists()})
 
