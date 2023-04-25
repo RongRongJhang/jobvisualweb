@@ -30,7 +30,7 @@ def get_piechart_data():
 def get_lollipop_data():
     cnt = Counter()
     sql = '''
-            SELECT job_id,
+            SELECT id,
             CASE
                 WHEN LEFT(job_location, 3) = '新竹市' THEN '新竹市'
                 WHEN job_location = '新竹縣市' THEN '其他'

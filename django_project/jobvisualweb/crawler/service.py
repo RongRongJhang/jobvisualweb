@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from datetime import datetime
 import pandas as pd
 import threading
 import requests
@@ -94,7 +95,7 @@ def get_json_data(i,job_id):
                 'job_require_major':','.join(job_info['condition']['major']) if job_info['condition']['major'] else '不拘',
                 'job_tool_require':','.join(item['description'] for item in job_info['condition']['specialty']) if job_info['condition']['specialty'] else '不拘',
                 'job_applicant':job_info['jobDetail']['needEmp'],
-                'date':job_info['header']['appearDate'],
+                'date':datetime.strftime(datetime.strptime(job_info['header']['appearDate'], "%Y/%m/%d"), "%Y-%m-%d"),
                 'job_link':f'https://www.104.com.tw/job/{job_id}?jobsource=jolist_b_date'}
                 }]
             )

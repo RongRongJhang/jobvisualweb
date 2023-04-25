@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="update col-md-10 text-left dt-image-register-btn">
+<div class="btn text-left dt-image-register-btn">
     <a href="{% url 'update' %}" class="btn btn-primary">更新Table</a>
 </div>
 <div class="card mb-3">
@@ -23,7 +23,7 @@
             <tbody>
                 {% for item in JobLists %}
                 <tr>
-                  <td>{{item.date}}</td>
+                  <td>{{item.date|date:"m/d"}}</td>
                   <td>{{item.job_title}}</td>
                   <td>{{item.company_name}}</td>
                   <td>{{item.job_salary}}</td>
