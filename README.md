@@ -1,7 +1,7 @@
 # 職缺訊息視覺化網站
 該專案為研究室專案實作考核項目，以 Django 框架為基底開發一個職缺訊息視覺化網站。首先透過網頁爬蟲技術從 104 人力銀行爬取資訊類職缺資料並儲存至 MySQL 資料庫，接著運用 Highcharts 函式庫生成多樣化的統計圖表，直觀呈現職缺分布與趨勢。
 
-![](https://meee.com.tw/OjFwpYc)
+![](https://github.com/RongRongJhang/jobvisualweb/blob/main/JobVisual.png)
 
 ## 工作log
 ### 03/13 -03/18
